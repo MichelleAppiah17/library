@@ -5,14 +5,14 @@ body{
     align-items: center;
     margin-top: 10%;
 }
-.newBook{
+#newBook{
     background-color: aquamarine;
     border-color:  aquamarine;
     height: 4em;
     width: 8em;
     font-size: larger;
 }
-form{
+#myform{
     display: flex;
     flex-direction: column;
     background-color: rgb(250, 234, 250);
@@ -35,3 +35,4 @@ input{
     border-color: rgb(172, 200, 250);
     font-size: 15px;
 }
+
