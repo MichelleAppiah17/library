@@ -57,6 +57,11 @@ function displayBooks() {
       bookCard.appendChild(removeButton);
 
       libraryShelf.appendChild(bookCard);
+
+      removeButton.addEventListener("click", function() {
+         bookCard.remove();
+         myLibrary.splice(myLibrary.indexOf(bookCard),1);
+      });
    }
 }
 
