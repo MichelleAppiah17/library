@@ -36,3 +36,25 @@ input{
     font-size: 15px;
 }
 
+#library_shelf{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#book_card{
+   width: 3em;
+   background-color: rgb(221, 52, 123); 
+   border: 1px solid rgb(30, 6, 68);
+   border-radius: 4px;
+   padding: 20px;
+   margin-bottom: 10px;
+}
+#read_button{
+    background-color: rgb(147, 147, 214);
+    border-radius: 4px;
+}
+#remove_button{
+    background-color: rgb(245, 111, 111);
+    border-radius: 4px;
+}
+
