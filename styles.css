@@ -27,7 +27,7 @@ input{
     height: 20px;
     margin-bottom: 10px;
 }
-.submit{
+#add_button{
     width: 5em;
     height: 2em;
     margin-left: 55px;
@@ -41,20 +41,28 @@ input{
     flex-wrap: wrap;
     justify-content: space-around;
 }
-#book_card{
-   width: 3em;
-   background-color: rgb(221, 52, 123); 
-   border: 1px solid rgb(30, 6, 68);
+.book_card{
+   width: 10em;
+   background-color: rgb(238, 240, 118); 
+   border: 7px solid rgb(30, 6, 68);
    border-radius: 4px;
    padding: 20px;
-   margin-bottom: 10px;
+   margin-left: 20px;
+   display: flex;
+   flex-direction: column;
+  
 }
-#read_button{
+.read_button{
     background-color: rgb(147, 147, 214);
     border-radius: 4px;
+    margin-bottom: 20px;
+    width: 7em;
+    margin-left: 30px;
 }
-#remove_button{
+.remove_button{
     background-color: rgb(245, 111, 111);
     border-radius: 4px;
+    width: 7em;
+    margin-left: 30px;
 }
 

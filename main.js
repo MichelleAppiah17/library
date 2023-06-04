@@ -9,17 +9,18 @@ newBookButton.addEventListener("click",function(){
    }
 });
 
-function Book(title, author, pages, read) {
-   this.title = title;
-   this.author = author;
-   this.pages = pages;
-   this.read = read;
+class Book{
+   constructor(title, author, pages, read) {
+      this.title = title;
+      this.author = author;
+      this.pages = pages;
+      this.read = read;
+   }
 }
 
 let myLibrary = [];
-
-function addBookToLibrary(title,author,pages,read) {
-   let newBook = new Book (title, author, pages, read);
+function addBookToLibrary(title,author,pages) {
+    newBook = new Book (title, author, pages, read);
    myLibrary.push(newBook);
 }
 
@@ -29,33 +30,46 @@ function displayBooks() {
 
    for(let i = 0; i < myLibrary.length; i++){
       let bookCard = document.createElement('div');
-      bookCard.idList.add('book_card');
+      bookCard.classList.add('book_card');
 
       let bookTitle = document.createElement('h3');
-      bookTitle.textContent = 'Title: ${myLibrary[i].title}';
+      bookTitle.textContent = `Title: ${myLibrary[i].title}`;
 
       let bookAuthor = document.createElement('p');
-      bookAuthor.textContent = 'Author: ${myLibrary[i].author}';
+      bookAuthor.textContent = `Author: ${myLibrary[i].author}`;
 
       let bookPages = document.createElement('p');
-      bookPages.textContent = 'Pages: ${myLibrary[i].pages}';
+      bookPages.textContent = `Pages: ${myLibrary[i].pages}`;
 
       let readButton = document.createElement('button');
-      readButton.idList.add('read_button');
+      readButton.classList.add('read_button');
       readButton.textContent = 'Read Status';
 
       let removeButton = document.createElement('button');
-      removeButton.idList.add('remove_button');
+      removeButton.classList.add('remove_button');
       removeButton.textContent = 'Remove';
 
 
       bookCard.appendChild(bookTitle);
       bookCard.appendChild(bookAuthor);
       bookCard.appendChild(bookPages);
-      bookCard.appendChild(bookRead);
       bookCard.appendChild(readButton);
       bookCard.appendChild(removeButton);
 
       libraryShelf.appendChild(bookCard);
    }
 }
+
+const form = document.querySelector("#myform");
+const addButton = document.querySelector('#add_button');
+addButton.addEventListener('click', function (event) {
+   event.preventDefault();
+   let title = document.querySelector('#title').value;
+   let author = document.querySelector('#author').value;
+   let pages = document.querySelector('#pages').value;
+   let read = document.querySelector('#read').checked;
+   
+   addBookToLibrary(title,author,pages);
+   displayBooks();
+   form.reset();
+});
