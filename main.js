@@ -19,7 +19,7 @@ class Book{
 }
 
 let myLibrary = [];
-function addBookToLibrary(title,author,pages) {
+function addBookToLibrary(title,author,pages,read) {
     newBook = new Book (title, author, pages, read);
    myLibrary.push(newBook);
 }
@@ -84,8 +84,14 @@ addButton.addEventListener('click', function (event) {
    let pages = document.querySelector('#pages').value;
    let read = document.querySelector('#read').checked;
    
-   addBookToLibrary(title,author,pages);
+   addBookToLibrary(title,author,pages,read);
    displayBooks();
-   form.style.display = "none"
+   popUp.style.display = "none";
    form.reset();
 });
+
+newBookButton.addEventListener("click", function(event){
+   event.preventDefault();
+       popUp.style.display = 'block';
+});
+
