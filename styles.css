@@ -1,10 +1,11 @@
 body{
+    background-color: #9f1239;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 10%;
 }
+
 #newBook{
     background-color: aquamarine;
     border-color:  aquamarine;
@@ -18,7 +19,7 @@ body{
     background-color: rgb(250, 234, 250);
     border: 1px solid black;
     padding: 20px;
-    margin: 20px;
+    margin-top: 20%;
     text-align: center;
     font-size: large;
 }
@@ -43,24 +44,25 @@ input{
 }
 .book_card{
    width: 10em;
-   background-color: rgb(238, 240, 118); 
-   border: 7px solid rgb(30, 6, 68);
+   background-color: #fecaca ; 
+   border: 7px solid #262626;
    border-radius: 4px;
    padding: 20px;
    margin-left: 20px;
+   margin-top: 10%;
    display: flex;
    flex-direction: column;
   
 }
 .read_button{
-    background-color: rgb(147, 147, 214);
+    background-color: rgb(234, 233, 109);
     border-radius: 4px;
     margin-bottom: 20px;
     width: 7em;
     margin-left: 30px;
 }
 .remove_button{
-    background-color: rgb(245, 111, 111);
+    background-color: #ef4444;
     border-radius: 4px;
     width: 7em;
     margin-left: 30px;

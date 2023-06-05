@@ -58,6 +58,16 @@ function displayBooks() {
 
       libraryShelf.appendChild(bookCard);
 
+      readButton.addEventListener("click", function(){
+         if (readButton.textContent === "Read") {
+            readButton.textContent = "Not Read";
+            readButton.style.backgroundColor = "#fde047"
+         } else {
+            readButton.textContent = "Read";
+            readButton.style.backgroundColor = "#a78bfa";
+         }
+      })
+
       removeButton.addEventListener("click", function() {
          bookCard.remove();
          myLibrary.splice(myLibrary.indexOf(bookCard),1);
@@ -76,5 +86,6 @@ addButton.addEventListener('click', function (event) {
    
    addBookToLibrary(title,author,pages);
    displayBooks();
+   form.style.display = "none"
    form.reset();
 });
