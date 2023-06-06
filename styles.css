@@ -36,6 +36,10 @@ input{
     border-color: rgb(172, 200, 250);
     font-size: 15px;
 }
+#close_button{
+    float: right;
+    cursor: pointer;
+}
 
 #library_shelf{
     display: flex;
