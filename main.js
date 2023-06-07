@@ -25,6 +25,7 @@ function addBookToLibrary(title,author,pages,read) {
 
     if (title === "" || author === "" || pages === "") {
       alert("please enter a value for all inputs");
+      return;
     } else {
       let newBook = new Book(title, author, pages, read);
     }
